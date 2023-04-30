@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> {%load static%}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'CSS/search_edit.css' %}">
+    <title>Search</title>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Search</h1>
+    </div>
+    <form action="search_data" method="POST" name="search" class="edit-form">
+        {%csrf_token%}
+        <div class="form-body">
+            <input type="text" name="id" class="form-body">
+            <button type="submit" class="btn">search</button>
+        </div>
+    </form>
+</body>
+
+</html>
